@@ -3,7 +3,7 @@ server:
 
 spring:
   r2dbc:
-    url: r2dbc:h2:file:///./${spring.application.name}/data/db
+    url: r2dbc:h2:file:///./data/db
     username: root
     password: 5939523
   jpa:

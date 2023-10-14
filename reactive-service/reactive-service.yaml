@@ -11,3 +11,12 @@ spring:
   sql:
     init:
       mode: always
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8000/eureka

@@ -2,11 +2,13 @@ server:
   port: 8011
 
 spring:
-  r2dbc:
-    url: r2dbc:h2:file:///./${spring.application.name}/data/db
+  datasource:
+    url: jdbc:h2:file:./.data/${spring.application.name}-db
     username: root
     password: 5939523
   jpa:
+    hibernate:
+      ddl-auto: update
     database-platform: org.hibernate.dialect.H2Dialect
   sql:
     init:

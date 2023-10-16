@@ -1,0 +1,22 @@
+server:
+  port: 8010
+
+spring:
+  r2dbc:
+    url: r2dbc:h2:file:///./${spring.application.name}/data/db
+    username: root
+    password: 5939523
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  sql:
+    init:
+      mode: always
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8000/eureka

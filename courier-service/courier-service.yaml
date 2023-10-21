@@ -22,3 +22,32 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8001/eureka
+
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      group:
+        all:
+          include: "*"
+      show-details: always
+      show-components: always
+  health:
+    circuit-breakers:
+      enabled: true
+
+resilience4j:
+  circuit-breaker:
+    configs:
+      default:
+        register-health-indicator: true
+        sliding-window-size: 5
+        permitted-number-of-calls-in-half-open-state: 3
+        sliding-window-type: COUNT_BASED
+    instances:
+      getCouriers:
+        base-config: default

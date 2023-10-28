@@ -9,9 +9,6 @@ spring:
           enabled: true
           lower-case-service-id: true
           route-id-prefix: /api
-      
-      default-filters:
-        - RewritePath=/api/.*?/(?<remaining>.*), /$\{remaining}
         
 eureka:
   client:

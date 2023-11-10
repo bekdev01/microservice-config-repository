@@ -13,7 +13,10 @@ spring:
   sql:
     init:
       mode: always
-
+      
+  kafka:
+    bootstrap-servers: localhost:9000
+    
 eureka:
   instance:
     prefer-ip-address: true
@@ -22,6 +25,3 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8001/eureka
-
-  kafka:
-    bootstrap-servers: localhost:9000

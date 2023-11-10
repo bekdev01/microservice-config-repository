@@ -14,6 +14,14 @@ spring:
     init:
       mode: always
 
+  kafka:
+    bootstrap-servers: localhost:9000
+    consumer:
+      group-id: organization
+
+application:
+  organization: organization-service
+
 eureka:
   instance:
     prefer-ip-address: true

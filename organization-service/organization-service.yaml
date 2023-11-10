@@ -8,7 +8,7 @@ spring:
     password: 5939523
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database-platform: org.hibernate.dialect.H2Dialect
   sql:
     init:
@@ -22,3 +22,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8001/eureka
+
+  kafka:
+    bootstrap-servers: localhost:9000

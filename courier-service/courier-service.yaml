@@ -32,6 +32,9 @@ eureka:
       defaultZone: http://localhost:8001/eureka
 
 management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:8004/api/v2/spans
   endpoints:
     web:
       base-path: /actuator

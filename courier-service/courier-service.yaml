@@ -62,3 +62,7 @@ resilience4j:
     instances:
       getCouriers:
         base-config: default
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"

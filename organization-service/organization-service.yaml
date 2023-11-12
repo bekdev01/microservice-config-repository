@@ -25,3 +25,12 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8001/eureka
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:8004/api/v2/spans

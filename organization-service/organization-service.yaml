@@ -14,8 +14,8 @@ spring:
     init:
       mode: always
       
-  # kafka:
-  #   bootstrap-servers: localhost:9000
+  kafka:
+    bootstrap-servers: localhost:9095
     
 eureka:
   instance:

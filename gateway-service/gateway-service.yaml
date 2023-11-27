@@ -8,6 +8,9 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+      
+  kafka:
+    bootstrap-servers: localhost:19092
         
 eureka:
   client:

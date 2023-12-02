@@ -16,7 +16,7 @@ spring:
       
   kafka:
     client-id: ${spring.application.name}-trace
-    bootstrap-servers: 192.168.99.100:19092
+    bootstrap-servers: localhost:19092
     producer:
       key-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
       value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer

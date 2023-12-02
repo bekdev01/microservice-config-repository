@@ -16,7 +16,7 @@ spring:
       
   kafka:
     client-id: ${spring.application.name}-trace
-    bootstrap-servers: localhost:9000
+    bootstrap-servers: localhost:19092
     producer:
       key-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
       value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
@@ -42,7 +42,7 @@ management:
     tracing:
       endpoint: http://localhost:8004/api/v2/spans
       kafka-sender:
-        enabled: false
+        enabled: true
   endpoints:
     web:
       base-path: /actuator

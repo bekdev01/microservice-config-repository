@@ -15,7 +15,11 @@ spring:
       mode: always
       
   kafka:
+    client-id: ${spring.application.name}
     bootstrap-servers: localhost:9000
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+      value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
     
 eureka:
   instance:
@@ -37,3 +41,5 @@ management:
   zipkin:
     tracing:
       endpoint: http://localhost:8004/api/v2/spans
+      kafka-sender:
+        enabled: false

@@ -10,7 +10,7 @@ spring:
           lower-case-service-id: true
       
   kafka:
-    bootstrap-servers: localhost:19092
+    bootstrap-servers: localhost:9000
         
 eureka:
   client:

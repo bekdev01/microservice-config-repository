@@ -15,7 +15,7 @@ spring:
       mode: always
       
   kafka:
-    client-id: ${spring.application.name}
+    client-id: ${spring.application.name}-trace
     bootstrap-servers: localhost:9000
     producer:
       key-serializer: org.apache.kafka.common.serialization.ByteArraySerializer

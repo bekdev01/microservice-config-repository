@@ -42,7 +42,7 @@ management:
     tracing:
       endpoint: http://localhost:8004/api/v2/spans
       kafka-sender:
-        enabled: true
+        enabled: false
   endpoints:
     web:
       base-path: /actuator

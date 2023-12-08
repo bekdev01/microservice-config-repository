@@ -23,7 +23,7 @@ spring:
           # PERMITTED APPLICATION IDENTIFIERS (AUDIENCES)
           audiences:
             - ${spring.application.name}
-            - courier-service
+            # - courier-service
       
   kafka:
     client-id: ${spring.application.name}-trace

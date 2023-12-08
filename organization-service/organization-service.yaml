@@ -18,7 +18,7 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8003
+          issuer-uri: auth-service
 
           # PERMITTED APPLICATION IDENTIFIERS (AUDIENCES)
           audiences:
@@ -27,7 +27,7 @@ spring:
       
   kafka:
     client-id: ${spring.application.name}-trace
-    bootstrap-servers: localhost:19092
+    bootstrap-servers: localhost:9000
     producer:
       key-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
       value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer

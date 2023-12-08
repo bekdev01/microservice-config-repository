@@ -13,6 +13,17 @@ spring:
   sql:
     init:
       mode: always
+
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8003
+
+          # PERMITTED APPLICATION IDENTIFIERS (AUDIENCES)
+          audiences:
+            - ${spring.application.name}
+            - courier-service
       
   kafka:
     client-id: ${spring.application.name}-trace

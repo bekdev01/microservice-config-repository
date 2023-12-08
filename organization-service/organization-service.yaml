@@ -18,7 +18,7 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: http://auth-service
+          issuer-uri: http://localhost:8003
 
           # PERMITTED APPLICATION IDENTIFIERS (AUDIENCES)
           audiences:

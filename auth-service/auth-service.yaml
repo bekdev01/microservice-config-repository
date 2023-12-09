@@ -6,9 +6,6 @@ logging:
     org.springframework.security: trace
 
 spring:
-  application:
-    name: auth-service
-
   datasource:
     url: jdbc:h2:file:./.data/${spring.application.name}-db
     username: root

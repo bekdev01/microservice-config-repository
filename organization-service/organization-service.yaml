@@ -47,6 +47,7 @@ logging:
 
 management:
   tracing:
+    enabled: false
     sampling:
       probability: 1.0
   zipkin:
